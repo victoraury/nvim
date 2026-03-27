@@ -7,3 +7,7 @@ vim.keymap.set("n", "x", '"_x')
 vim.keymap.set("n", "<leader>Ab", function()
   vim.cmd("DroidRun")
 end, { desc = "Deploy android app" })
+
+vim.keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<LocalLeader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
